@@ -41,10 +41,20 @@ export interface PostSettings {
   linkCard: boolean
 }
 
+// Analytics settings configuration type
+export interface AnalyticsSettings {
+  enabled: boolean
+  plausible?: {
+    domain: string
+    src: string
+  }
+}
+
 // Theme configuration type
 export interface ThemeConfig {
   site: SiteInfo
   general: GeneralSettings
   date: DateSettings
   post: PostSettings
+  analytics: AnalyticsSettings
 }
